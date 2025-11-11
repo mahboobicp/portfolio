@@ -3,276 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahboob Ur Rahman | Systems Administrator Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>MAHBOOB UR RAHMAN - IT Infrastructure & Cloud Engineer</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font and configure Tailwind colors -->
     <style>
-        :root {
-            --primary-color: #0077b6; /* Professional Dark Blue */
-            --secondary-color: #00b4d8; /* Lighter Blue Accent */
-            --text-color: #333;
-            --background-light: #f8f9fa;
-            --background-dark: #e9ecef;
-            --border-color: #ced4da;
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-light);
-            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* GitHub Dark Theme Background */
+            color: #c9d1d9; /* Light text color */
         }
-        .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 30px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        header {
-            text-align: center;
-            padding-bottom: 25px;
-            border-bottom: 4px solid var(--primary-color);
-            margin-bottom: 30px;
-        }
-        header h1 {
-            color: var(--primary-color);
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.1em;
-            color: #555;
-            margin: 5px 0 15px;
-        }
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .contact-info a, .contact-info span {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            background: var(--background-dark);
-            padding: 8px 12px;
-            border-radius: 5px;
-            font-size: 0.9em;
-            color: var(--text-color);
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-        .contact-info a:hover {
-            background: var(--border-color);
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-        .section h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-        }
-
-        /* Experience and Education Styling */
-        .experience-item {
-            margin-bottom: 25px;
-            padding-left: 15px;
-            position: relative;
-        }
-        .experience-item::before {
-            content: '•';
-            color: var(--primary-color);
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-            position: absolute;
-            left: 0;
-        }
-        .experience-item h3 {
-            margin: 0 0 5px 0;
-            color: var(--secondary-color);
-            font-size: 1.2em;
-        }
-        .experience-item p {
-            margin: 0 0 10px 0;
-            font-style: italic;
-            color: #6c757d;
-            font-size: 0.95em;
-        }
-        .experience-item ul {
-            list-style-type: none; /* Remove default bullets */
-            padding: 0;
-            margin: 5px 0 0 15px;
-        }
-        .experience-item ul li {
-            padding-left: 1em;
-            text-indent: -1em;
-        }
-        .experience-item ul li::before {
-            content: "\f058"; /* Checkmark icon */
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            color: var(--primary-color);
-            margin-right: 5px;
-        }
-
-        /* Skills and Certifications Styling */
-        .skills-list, .certifications-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .skills-list li, .certifications-list li {
-            background: var(--primary-color);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 25px;
-            font-weight: 600;
-            font-size: 0.9em;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        }
-        .skills-list li i {
-            color: var(--secondary-color); /* Lighter accent for the icon */
-        }
-        .certifications-list li {
-             background: var(--background-dark);
-             color: var(--text-color);
-             border: 1px solid var(--border-color);
-        }
-        .certifications-list li i {
-            color: var(--primary-color);
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            .container {
-                width: 95%;
-                padding: 15px;
-                margin: 10px auto;
-            }
-            header h1 {
-                font-size: 2em;
-            }
-            .contact-info {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .contact-info a, .contact-info span {
-                width: 100%;
-                justify-content: flex-start;
-            }
-            .skills-list, .certifications-list {
-                gap: 8px;
-            }
-        }
+        /* Custom Accent Colors */
+        .accent-teal { color: #20c997; } /* Deep Teal for primary accents */
+        .bg-accent-teal { background-color: #20c997; }
+        .border-accent-teal { border-color: #20c997; }
+        .accent-yellow { color: #ffab00; } /* Orange-Yellow for secondary accents */
+        .bg-card { background-color: #161b22; } /* Card background, slightly lighter than body */
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': '#0d1117',
+                        'secondary-bg': '#161b22',
+                        'accent-teal': '#20c997',
+                        'accent-yellow': '#ffab00',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Mahboob Ur Rahman</h1>
-            <p>Multi-certified Systems Administrator | 3.5 Years' Experience</p>
-            <div class="contact-info">
-                <a href="mailto:MAHBOOBICP@GMAIL.COM"><i class="fas fa-envelope"></i> MAHBOOBICP@GMAIL.COM</a>
-                <span><i class="fas fa-phone"></i> (+92) 345-9533709</span>
-                <span><i class="fas fa-map-marker-alt"></i> Peshawar, KPK, Pakistan</span>
-                <span><i class="fab fa-skype"></i> MAHBOOB3828</span>
-            </div>
-        </header>
+<body class="antialiased">
 
-        <div class="section">
-            <h2><i class="fas fa-user-tie"></i> Professional Summary</h2>
-            [span_0](start_span)[span_1](start_span)<p>Multi-certified (**MCSE, MCSA, MCP, CCNA, ACE Palo Alto Networks**) systems administrator[span_0](end_span)[span_1](end_span) [span_2](start_span)with **3.5 years' experience** in Computer System & Network[span_2](end_span). [span_3](start_span)[span_4](start_span)[span_5](start_span)Strong experience managing server infrastructures and network operations across Windows Server (2012/2016) and various Windows client platforms (7/Vista, 8, 10)[span_3](end_span)[span_4](end_span)[span_5](end_span). [span_6](start_span)Proven ability to effectively plan, install, configure, and optimize IT infrastructures to achieve **high availability and performance**[span_6](end_span).</p>
-        </div>
-
-        <div class="section">
-            <h2><i class="fas fa-cogs"></i> Core Skills & Certifications</h2>
-            
-            <h3><i class="fas fa-tools"></i> Key Technical Skills</h3>
-            <ul class="skills-list">
-                [span_7](start_span)[span_8](start_span)<li><i class="fab fa-windows"></i> Windows Server 2012/2016[span_7](end_span)[span_8](end_span)</li>
-                [span_9](start_span)<li><i class="fas fa-shield-alt"></i> Sophos, OpenSense, PfSense Firewalls[span_9](end_span)</li>
-                [span_10](start_span)[span_11](start_span)<li><i class="fas fa-network-wired"></i> LAN, WAN & Wireless (EAP Controllers)[span_10](end_span)[span_11](end_span)</li>
-                [span_12](start_span)<li><i class="fab fa-microsoft"></i> Office 365 Management[span_12](end_span) [span_13](start_span)[span_14](start_span)& Outlook Config[span_13](end_span)[span_14](end_span)</li>
-                [span_15](start_span)<li><i class="fas fa-server"></i> Active Directory & DHCP Server[span_15](end_span)</li>
-                [span_16](start_span)<li><i class="fas fa-laptop"></i> Desktop/Laptop & Remote Support[span_16](end_span)</li>
-                [span_17](start_span)<li><i class="fas fa-video"></i> CCTV DVR & PBX Telephony Troubleshoot[span_17](end_span)</li>
-            </ul>
-
-            <br>
-
-            <h3><i class="fas fa-certificate"></i> Certifications</h3>
-            <ul class="certifications-list">
-                [span_18](start_span)<li><i class="fas fa-code-branch"></i> Accredited Configuration Engineer (ACE) - Palo Alto Networks[span_18](end_span)</li>
-                [span_19](start_span)<li><i class="fas fa-wifi"></i> Cisco Certified Network Associate (CCNA R & S)[span_19](end_span)</li>
-                [span_20](start_span)<li><i class="fas fa-key"></i> Microsoft Certified Solution Expert (MCSE)[span_20](end_span)</li>
-                [span_21](start_span)<li><i class="fas fa-desktop"></i> Microsoft Certified Solution Associate (MCSA)[span_21](end_span)</li>
-                [span_22](start_span)<li><i class="fas fa-microchip"></i> Microsoft Certified Professional (MCP)[span_22](end_span)</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
-
-            <div class="experience-item">
-                <h3>Network and Support Executive</h3>
-                <p>KPK Economic Zone Development and Management Company | <i class="far fa-calendar-alt"></i> Mar 2016 - Present</p>
-                <ul>
-                    [span_23](start_span)<li>Performed configuration and maintenance for **Sophos, OpenSense, and PfSense Firewalls**[span_23](end_span).</li>
-                    [span_24](start_span)[span_25](start_span)<li>Managed **Windows Server 2012/2016** and **Office 365 Management**[span_24](end_span)[span_25](end_span).</li>
-                    [span_26](start_span)<li>Responsible for designing, installation, and troubleshooting of **LAN, WAN & Wireless (Controllers EAP)**[span_26](end_span).</li>
-                    [span_27](start_span)<li>Handled Time Attendance, **CCTV DVR**, and **PBX telephonic** troubleshooting[span_27](end_span).</li>
-                    [span_28](start_span)<li>Provided support for 150 Desktops & Laptops and remote support[span_28](end_span).</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>System Administrator</h3>
-                <p>TAGM Chartered Accountants | <i class="far fa-calendar-alt"></i> Dec 2013 - Jan 2016</p>
-                <ul>
-                    [span_29](start_span)<li>Contributed to the implementation of new office IT infrastructure plans to ensure **availability and reliability** in line with global guidelines[span_29](end_span).</li>
-                    [span_30](start_span)<li>Managed information security processes to ensure high security of corporate systems[span_30](end_span).</li>
-                    [span_31](start_span)<li>Provided **first-line technical support** to TAGM users, ensuring systems functioned to standard levels[span_31](end_span).</li>
-                    [span_32](start_span)<li>Maintained the seventy computer setup and installed/maintained **QuickBooks**[span_32](end_span).</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>System Administrator</h3>
-                <p>Zxmco Motorcycle | <i class="far fa-calendar-alt"></i> Jan 2013 - Dec 2013</p>
-                <ul>
-                    [span_33](start_span)<li>Maintained the fifty-computer setup[span_33](end_span).</li>
-                    [span_34](start_span)<li>Managed and maintained the **Active Directory Services** in Windows Server 2003[span_34](end_span).</li>
-                    [span_35](start_span)<li>Troubleshooted LAN and WAN issues and computer hardware problems[span_35](end_span).</li>
-                    [span_36](start_span)<li>Managed **DHCP Server** and overall local and wide area network[span_36](end_span).</li>
-                </ul>
+    <!-- Header & Hero Section -->
+    <header class="py-16 px-4 md:px-8 lg:px-16 bg-secondary-bg border-b border-gray-700">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="text-center md:text-left">
+                <h1 class="text-5xl font-extrabold tracking-tight text-white mb-2">MAHBOOB UR RAHMAN</h1>
+                <h2 class="text-2xl font-medium accent-teal mb-4">IT Infrastructure & Cloud Engineer</h2>
+                <p class="text-lg max-w-2xl text-gray-400">
+                    Experienced Systems Engineer with **7+ years** in designing, deploying, and optimizing resilient IT systems using **VMware vSphere, Azure, and AWS**. Recognized for driving operational continuity and secure, scalable architectures in enterprise environments.
+                </p>
+                <!-- Contact/Action Buttons -->
+                <div class="mt-8 space-x-4">
+                    <a href="#contact" class="inline-block px-6 py-3 text-sm font-semibold text-primary-bg bg-accent-teal rounded-lg shadow-lg hover:bg-opacity-90 transition duration-300">
+                        Get In Touch
+                    </a>
+                    <a href="https://linkedin.com/in/iammahbooburrahman" target="_blank" class="inline-block px-6 py-3 text-sm font-semibold text-accent-teal border border-accent-teal rounded-lg hover:bg-accent-teal hover:text-primary-bg transition duration-300">
+                        LinkedIn Profile
+                    </a>
+                </div>
             </div>
         </div>
+    </header>
 
-        <div class="section">
-            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-            <div class="experience-item">
-                <h3>BCS (Hons), Computer Science</h3>
-                <p>Islamia College University Peshawar | [span_37](start_span)Graduated: 2014[span_37](end_span)</p>
+    <!-- Main Content Sections -->
+    <main class="py-16 px-4 md:px-8 lg:px-16 max-w-6xl mx-auto">
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-16">
+            <h3 class="text-4xl font-bold mb-8 text-white border-l-4 border-accent-yellow pl-4">Core Technical Skills</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Skill Category 1: Cloud -->
+                <div class="p-5 bg-card rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                    <span class="text-xl accent-teal">☁️ Cloud Platforms</span>
+                    <ul class="mt-2 text-gray-400 text-sm space-y-1">
+                        <li>Microsoft Azure</li>
+                        <li>AWS (Solutions Architect)</li>
+                        <li>Hybrid Deployments</li>
+                    </ul>
+                </div>
+                <!-- Skill Category 2: Virtualization -->
+                <div class="p-5 bg-card rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                    <span class="text-xl accent-teal">💾 Virtualization</span>
+                    <ul class="mt-2 text-gray-400 text-sm space-y-1">
+                        <li>VMware vSphere (VCP-DCV)</li>
+                        <li>HA/vMotion</li>
+                        <li>Citrix XenServer</li>
+                    </ul>
+                </div>
+                <!-- Skill Category 3: Networking -->
+                <div class="p-5 bg-card rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                    <span class="text-xl accent-teal">🌐 Networking</span>
+                    <ul class="mt-2 text-gray-400 text-sm space-y-1">
+                        <li>Firewalls, VPNs, VLANs</li>
+                        <li>DNS/DHCP</li>
+                        <li>LAN/WAN (CCNA)</li>
+                    </ul>
+                </div>
+                <!-- Skill Category 4: OS & Servers -->
+                <div class="p-5 bg-card rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                    <span class="text-xl accent-teal">💻 Servers & OS</span>
+                    <ul class="mt-2 text-gray-400 text-sm space-y-1">
+                        <li>Windows Server</li>
+                        <li>Linux (Ubuntu, CentOS)</li>
+                        <li>Active Directory / GPO</li>
+                    </ul>
+                </div>
+                <!-- Skill Category 5: Collaboration & Tools -->
+                <div class="p-5 bg-card rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-[1.02]">
+                    <span class="text-xl accent-teal">🔧 Tools & Services</span>
+                    <ul class="mt-2 text-gray-400 text-sm space-y-1">
+                        <li>MS365 Admin Center</li>
+                        <li>MS Team, SharePoint, Intune</li>
+                        <li>Veeam Backup</li>
+                    </ul>
+                </div>
             </div>
-            <div class="experience-item">
-                <h3>Intermediate</h3>
-                <p>Peshawar Public School and College Peshawar | [span_38](start_span)Graduated: 2010[span_38](end_span)</p>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="mb-16">
+            <h3 class="text-4xl font-bold mb-8 text-white border-l-4 border-accent-yellow pl-4">Professional Certifications</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cert 1 -->
+                <div class="p-6 bg-card rounded-xl flex items-start space-x-4 border border-gray-700">
+                    <svg class="w-8 h-8 accent-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 0012 21.018A12.001 12.001 0 0020.618 6.984z" />
+                    </svg>
+                    <div>
+                        <p class="text-lg font-semibold text-white">VMware VCP-DCV</p>
+                        <p class="text-sm text-gray-400">VMware Certified Professional - Data Center Virtualization</p>
+                    </div>
+                </div>
+                <!-- Cert 2 -->
+                <div class="p-6 bg-card rounded-xl flex items-start space-x-4 border border-gray-700">
+                    <svg class="w-8 h-8 accent-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                    <div>
+                        <p class="text-lg font-semibold text-white">Microsoft Certified: Azure Administrator Associate</p>
+                        <p class="text-sm text-gray-400">Expert in deploying and managing cloud environments.</p>
+                    </div>
+                </div>
+                <!-- Cert 3 -->
+                <div class="p-6 bg-card rounded-xl flex items-start space-x-4 border border-gray-700">
+                    <svg class="w-8 h-8 accent-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9h2m-2 0h2" />
+                    </svg>
+                    <div>
+                        <p class="text-lg font-semibold text-white">AWS Solutions Architect - Associate</p>
+                        <p class="text-sm text-gray-400">Architecting scalable systems on Amazon Web Services.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+            <div class="mt-4 text-sm text-gray-500 italic">
+                Also certified in CCNA, Cyber Security Foundation, and MCSE.
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="mb-16">
+            <h3 class="text-4xl font-bold mb-8 text-white border-l-4 border-accent-yellow pl-4">Professional Experience</h3>
+            <div class="space-y-10">
+
+                <!-- Job 1 -->
+                <div class="p-6 bg-card rounded-xl shadow-lg border-l-4 border-accent-teal">
+                    <h4 class="text-2xl font-semibold text-white">Network and Support Officer</h4>
+                    <p class="accent-teal font-medium mb-2">KPK Economic Zone Development and Management Company | Oct 2021 – Present</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Managed and optimized enterprise IT infrastructure across systems, networks, virtualization, and **Azure cloud** environments.</li>
+                        <li>Deployed and maintained **VMware vSphere (HA/vMotion)**, successfully achieving zero downtime and seamless scalability.</li>
+                        <li>Led Microsoft **Azure hybrid deployments**, supporting high availability and secure cloud connectivity.</li>
+                        <li>Enhanced network security by optimizing firewall and VPN configurations, **reducing unauthorized access incidents by 30%**.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="p-6 bg-card rounded-xl shadow-lg border-l-4 border-gray-600">
+                    <h4 class="text-2xl font-semibold text-white">IT Executive</h4>
+                    <p class="text-gray-400 font-medium mb-2">KPK Economic Zone Development and Management Company | Nov 2016 – Oct 2021</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Provided operational IT support, maintaining network stability, system reliability, and secure cloud access.</li>
+                        <li>Configured **LAN/WAN, firewalls, and VPNs** to enhance system security and performance.</li>
+                        <li>Implemented system monitoring protocols that improved **uptime reliability by 25%**.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-16 text-center">
+            <h3 class="text-4xl font-bold mb-8 text-white border-b-4 border-accent-teal inline-block pb-2">Connect With Me</h3>
+            <div class="flex flex-wrap justify-center items-center gap-6 mt-8">
+                <!-- Phone -->
+                <div class="flex items-center space-x-3 p-4 bg-card rounded-lg hover:bg-gray-800 transition duration-300">
+                    <span class="accent-yellow text-xl">📞</span>
+                    <span class="text-lg text-white font-medium">(+92) 316-9533705</span>
+                </div>
+                <!-- Email -->
+                <div class="flex items-center space-x-3 p-4 bg-card rounded-lg hover:bg-gray-800 transition duration-300">
+                    <span class="accent-yellow text-xl">📧</span>
+                    <a href="mailto:mahboobicp@gmail.com" class="text-lg text-white font-medium hover:accent-teal">mahboobicp@gmail.com</a>
+                </div>
+                <!-- LinkedIn -->
+                <div class="flex items-center space-x-3 p-4 bg-card rounded-lg hover:bg-gray-800 transition duration-300">
+                    <span class="accent-yellow text-xl">🔗</span>
+                    <a href="https://linkedin.com/in/iammahbooburrahman" target="_blank" class="text-lg text-white font-medium hover:accent-teal">LinkedIn/iammahbooburrahman</a>
+                </div>
+            </div>
+            <div class="mt-8 text-gray-500">
+                Peshawar, KPK Pakistan
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 px-4 md:px-8 lg:px-16 bg-secondary-bg text-center border-t border-gray-700">
+        <p class="text-sm text-gray-500">
+            &copy; 2025 Mahboob Ur Rahman. Designed for public accessibility via GitHub Pages.
+        </p>
+    </footer>
+
 </body>
 </html>
+
