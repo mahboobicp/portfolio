@@ -1,212 +1,289 @@
-
 <!doctype html>
 
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mahboob Ur Rahman — IT Infrastructure & Systems Engineer</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <meta name="description" content="Mahboob Ur Rahman — VMware | AWS | Azure | Cisco | IT Professional" />
   <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#10b981; --glass: rgba(255,255,255,0.04);
-      --maxw:1100px; --radius:14px; --gap:18px; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0; background: linear-gradient(180deg,#071029 0%, #07172a 60%); color:#e6eef6; -webkit-font-smoothing:antialiased}
-    .wrap{max-width:var(--maxw); margin:36px auto; padding:28px;}
-    header{display:flex; gap:20px; align-items:center; justify-content:space-between}
-    .brand{display:flex; gap:16px; align-items:center}
-    .logo{width:68px; height:68px; border-radius:12px; display:grid; place-items:center; background:linear-gradient(135deg,#064e3b,#0891b2); font-weight:800; font-size:20px}
-    .name{line-height:1}
-    .name h1{margin:0; font-size:20px}
-    .name p{margin:0; color:var(--muted); font-size:13px}
-    nav{display:flex; gap:12px}
-    .btn{padding:10px 14px; border-radius:10px; background:var(--glass); color:var(--muted); font-weight:600; border:1px solid rgba(255,255,255,0.03); text-decoration:none}
-    .hero{display:grid; grid-template-columns:1fr 360px; gap:24px; margin-top:26px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:22px; border-radius:var(--radius); border:1px solid rgba(255,255,255,0.03)}
-    .intro h2{margin:0 0 10px 0; font-size:22px}
-    .intro p{color:var(--muted); margin:0 0 14px 0}
-    .contact{display:flex; gap:10px; flex-direction:column}
-    .contact a{color:#e6eef6; text-decoration:none}
-    .skills{display:flex; gap:10px; flex-wrap:wrap}
-    .skill{background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); padding:8px 10px; border-radius:10px; font-size:13px; color:var(--muted)}
-    .meta{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px}/* Experience timeline */
-.timeline{margin-top:16px}
-.item{display:flex; gap:14px; padding:14px; align-items:flex-start}
-.badge{width:46px; height:46px; border-radius:10px; background:rgba(255,255,255,0.02); display:grid; place-items:center; font-weight:700}
-.item .body h3{margin:0; font-size:15px}
-.item .body p{margin:6px 0 0 0; color:var(--muted); font-size:13px}
-
-/* Certifications & Education */
-.grid-2{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:14px}
-footer{margin-top:26px; color:var(--muted); font-size:13px; text-align:center}
-
-/* Responsive */
-@media (max-width:980px){
-  .hero{grid-template-columns:1fr 1fr}
-  .wrap{padding:18px}
-}
-@media (max-width:720px){
-  .hero{grid-template-columns:1fr;}
-  nav{display:none}
-  header{align-items:flex-start}
-  .logo{width:56px; height:56px}
-  .brand{gap:12px}
-  .grid-2{grid-template-columns:1fr}
+    :root {
+      --bg: #0f1724;
+      --card: #101a2c;
+      --accent: #10b981;
+      --muted: #a1b2c7;
+      --radius: 14px;
+      --shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+      --max-width: 1200px;
+      font-family: 'Inter', sans-serif;
+    }* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* small utilities */
-.pill{display:inline-block; padding:6px 8px; border-radius:999px; background:rgba(16,185,129,0.12); color:var(--accent); font-weight:600}
-.muted{color:var(--muted)}
-.cta{display:inline-block; margin-top:12px; background:linear-gradient(90deg,var(--accent), #06b6d4); color:#021019; padding:10px 14px; border-radius:10px; font-weight:700; text-decoration:none}
-.socials{display:flex; gap:10px}
-.socials a{padding:8px 10px; border-radius:10px; background:rgba(255,255,255,0.02); text-decoration:none; color:var(--muted); font-weight:600}
+body {
+  background: linear-gradient(180deg, #081220 0%, #0f1724 100%);
+  color: #e2e8f0;
+  overflow-x: hidden;
+}
 
-/* subtle hover */
-a.btn:hover, .cta:hover, .socials a:hover{transform:translateY(-3px); transition:all .18s ease}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #064e3b, #0891b2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.logo-text h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.logo-text p {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+nav {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+nav a:hover {
+  background: var(--accent);
+  color: #021019;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--card);
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  flex: 1 1 auto;
+}
+
+section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+.about p, .experience p, .skills p, .education p, .contact p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-top: 0.8rem;
+}
+
+.skill {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.experience-item {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.experience-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.experience-item span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+ul.certifications {
+  list-style: none;
+  text-align: center;
+  color: var(--muted);
+}
+
+ul.certifications li {
+  margin: 0.2rem 0;
+}
+
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    justify-content: center;
+    width: 100%;
+  }
+  section {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .logo-text h1 {
+    font-size: 1.2rem;
+  }
+  section h2 {
+    font-size: 1.2rem;
+  }
+}
 
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <div class="container">
     <header>
-      <div class="brand">
-        <div class="logo">MR</div>
-        <div class="name">
+      <div class="logo">
+        <div class="logo-icon">MR</div>
+        <div class="logo-text">
           <h1>Mahboob Ur Rahman</h1>
           <p>VMware | AWS | Azure | Cisco — IT Infrastructure & Systems Engineer</p>
         </div>
       </div>
       <nav>
-        <a class="btn" href="#about">About</a>
-        <a class="btn" href="#skills">Skills</a>
-        <a class="btn" href="#experience">Experience</a>
-        <a class="btn" href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
       </nav>
-    </header><section class="hero">
-  <div class="card intro">
-    <h2>Hello — I'm Mahboob</h2>
-    <p>Experienced IT Infrastructure & Systems Engineer with over seven years of expertise in managing Windows/Linux servers, Active Directory, MS365, and enterprise network environments. Skilled in designing resilient infrastructures using VMware, Azure, and AWS while improving uptime and security. <!-- source: resume -->
-    </p>
-
-    <div class="meta">
-      <span class="pill">Peshawar, KPK</span>
-      <span class="pill">BCS (Hons)</span>
-      <span class="pill">VCP-DCV • Azure Admin • AWS SAA</span>
-    </div>
-
-    <div style="margin-top:16px">
-      <h3 id="skills" style="margin:0 0 8px 0">Technical skills</h3>
-      <div class="skills">
-        <span class="skill">VMware vSphere</span>
-        <span class="skill">Azure</span>
-        <span class="skill">AWS</span>
-        <span class="skill">Windows Server</span>
-        <span class="skill">Linux (Ubuntu, CentOS)</span>
-        <span class="skill">Networking (VLAN, VPN)</span>
-        <span class="skill">Active Directory</span>
-        <span class="skill">Veeam Backup</span>
-        <span class="skill">Intune</span>
-      </div>
-    </div>
-
-    <a class="cta" href="#contact">Download Resume</a>
-  </div>
-
-  <aside class="card contact">
-    <div style="display:flex; align-items:center; justify-content:space-between">
-      <div>
-        <strong>Contact</strong>
-        <div class="muted">(+92) 316-9533705</div>
-        <div class="muted">mahboobicp@gmail.com</div>
-        <div class="muted">linkedin.com/in/iammahbooburrahman</div>
-      </div>
-      <div class="socials">
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
-      </div>
-    </div>
-
-    <div style="margin-top:12px">
-      <strong>Current</strong>
-      <div class="muted">Network & Support Officer — KPK Economic Zone Development and Management Company</div>
-      <div style="margin-top:8px"><span class="muted">Oct 2021 – Present</span></div>
-    </div>
-
-    <div style="margin-top:12px">
-      <strong>Quick stats</strong>
-      <div class="muted">7+ years experience • Uptime +25% • Security incidents -30%</div>
-    </div>
-  </aside>
+    </header><section id="about" class="about">
+  <h2>About Me</h2>
+  <p>Experienced IT Infrastructure & Systems Engineer with 7+ years in managing Windows/Linux servers, Active Directory, Microsoft 365, and enterprise networks. Skilled in VMware, Azure, and AWS, delivering secure and reliable IT environments.</p>
 </section>
 
-<section class="card timeline" id="experience">
-  <h2 style="margin-top:0">Experience</h2>
-  <div class="item">
-    <div class="badge">K</div>
-    <div class="body">
-      <h3>Network and Support Officer — KPK Economic Zone Development & Management Company</h3>
-      <p class="muted">Peshawar, Pakistan | Oct 2021 – Present</p>
-      <p class="muted">Manage and optimize enterprise IT infrastructure across systems, networks, virtualization, and cloud (Azure). Oversee Windows/Linux servers, Active Directory, and firewalls to ensure secure operations. Deploy and maintain VMware vSphere (HA/vMotion) achieving zero downtime and seamless scalability. (source: resume). fileciteturn0file0</p>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="badge">E</div>
-    <div class="body">
-      <h3>IT Executive — KPK Economic Zone Development & Management Company</h3>
-      <p class="muted">Peshawar, Pakistan | Nov 2016 – Oct 2021</p>
-      <p class="muted">Provided operational IT support, maintained network stability, configured LAN/WAN, firewalls and VPNs, and implemented monitoring protocols to improve uptime. fileciteturn0file0</p>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="badge">T</div>
-    <div class="body">
-      <h3>System Administrator — TAGM Chartered Accountants</h3>
-      <p class="muted">Lahore, Pakistan | Dec 2015 – Jan 2016</p>
-      <p class="muted">Administered Windows/Linux servers, DNS/DHCP, Group Policy; managed LAN/WAN devices and backup policies. fileciteturn0file0</p>
-    </div>
-  </div>
-
-  <div class="grid-2">
-    <div class="card">
-      <h3 style="margin:0 0 8px 0">Education</h3>
-      <p class="muted">BCS (Hons) — Computer Science, Islamia College University, Peshawar (2014). fileciteturn0file0</p>
-    </div>
-
-    <div class="card">
-      <h3 style="margin:0 0 8px 0">Certifications</h3>
-      <ul class="muted" style="margin:0 0 0 18px; padding:0">
-        <li>VMware VCP-DCV</li>
-        <li>Microsoft Certified: Azure Administrator Associate</li>
-        <li>AWS Solutions Architect – Associate</li>
-        <li>Cyber Security Foundation</li>
-        <li>CCNA</li>
-        <li>MCSE</li>
-      </ul>
-      <div class="muted" style="margin-top:8px">fileciteturn0file0</div>
-    </div>
+<section id="skills" class="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills-list">
+    <div class="skill">VMware vSphere</div>
+    <div class="skill">Azure</div>
+    <div class="skill">AWS</div>
+    <div class="skill">Windows Server</div>
+    <div class="skill">Linux</div>
+    <div class="skill">Networking (VLAN, VPN)</div>
+    <div class="skill">Active Directory</div>
+    <div class="skill">Veeam Backup</div>
+    <div class="skill">Intune</div>
   </div>
 </section>
 
-<section class="card" id="contact" style="margin-top:14px">
-  <h2 style="margin-top:0">Contact & Next Steps</h2>
-  <p class="muted">Interested employers can reach out at <strong>mahboobicp@gmail.com</strong> or via LinkedIn. To host this page publicly via GitHub Pages, follow the steps below.</p>
+<section id="experience" class="experience">
+  <h2>Experience</h2>
+  <div class="experience-item">
+    <h3>Network & Support Officer</h3>
+    <span>KPK Economic Zone Development & Management Company | Oct 2021 – Present</span>
+    <p>Managing enterprise IT systems, virtualization (VMware), and cloud infrastructure with Azure. Focused on uptime, scalability, and security improvement.</p>
+  </div>
+  <div class="experience-item">
+    <h3>IT Executive</h3>
+    <span>KPEZDMC | Nov 2016 – Oct 2021</span>
+    <p>Provided IT support, maintained LAN/WAN and VPNs, optimized network stability and implemented data backup systems.</p>
+  </div>
+  <div class="experience-item">
+    <h3>System Administrator</h3>
+    <span>TAGM Chartered Accountants | Dec 2015 – Jan 2016</span>
+    <p>Administered Windows/Linux servers, DNS/DHCP, Group Policy, and backup operations.</p>
+  </div>
+</section>
 
-  <ol class="muted">
-    <li>Create a new public repository on GitHub named <code>mahboob-portfolio</code> (or similar).</li>
-    <li>Commit this file as <code>index.html</code> to the repository root.</li>
-    <li>Push to GitHub and enable Pages in the repository settings (choose the <code>main</code> branch and root). Your site will be available at <code>https://&lt;your-username&gt;.github.io/&lt;repo-name&gt;</code>.</li>
-  </ol>
+<section id="education" class="education">
+  <h2>Education & Certifications</h2>
+  <p>BCS (Hons) — Computer Science, Islamia College University, Peshawar (2014)</p>
+  <ul class="certifications">
+    <li>VMware VCP-DCV</li>
+    <li>Azure Administrator Associate</li>
+    <li>AWS Solutions Architect – Associate</li>
+    <li>Cyber Security Foundation</li>
+    <li>CCNA | MCSE</li>
+  </ul>
+</section>
 
-  <p class="muted">If you want, I can also provide a ready-to-publish ZIP with the HTML (and optional resume PDF) or create a minimal README and Git commands to push the site — tell me which you prefer.</p>
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:mahboobicp@gmail.com">mahboobicp@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/iammahbooburrahman">linkedin.com/in/iammahbooburrahman</a></p>
+  <p>GitHub: <a href="#">github.com/mahboob</a></p>
 </section>
 
 <footer>
-  Built with care • Mahboob Ur Rahman — VMware | AWS | Azure | Cisco • Last update: Nov 11, 2025
+  © 2025 Mahboob Ur Rahman | Built with care | Last updated: Nov 11, 2025
 </footer>
 
   </div>
