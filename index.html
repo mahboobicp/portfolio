@@ -4,106 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahboob Ur Rahman | Systems Administrator Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #0077b6; /* Professional Dark Blue */
+            --secondary-color: #00b4d8; /* Lighter Blue Accent */
+            --text-color: #333;
+            --background-light: #f8f9fa;
+            --background-dark: #e9ecef;
+            --border-color: #ced4da;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: var(--background-light);
+            color: var(--text-color);
         }
         .container {
-            width: 85%;
-            margin: 30px auto;
+            max-width: 1000px;
+            margin: 20px auto;
             background: #fff;
-            padding: 20px 40px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
         header {
             text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #007bff;
-            margin-bottom: 20px;
+            padding-bottom: 25px;
+            border-bottom: 4px solid var(--primary-color);
+            margin-bottom: 30px;
         }
         header h1 {
-            color: #007bff;
+            color: var(--primary-color);
             margin: 0;
+            font-size: 2.5em;
         }
         header p {
             font-size: 1.1em;
             color: #555;
-            margin: 5px 0 0;
-        }
-        .section {
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 1px dashed #ccc;
-        }
-        .section:last-child {
-            border-bottom: none;
-        }
-        .section h2 {
-            color: #333;
-            border-left: 5px solid #007bff;
-            padding-left: 10px;
-            margin-bottom: 15px;
+            margin: 5px 0 15px;
         }
         .contact-info {
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-top: 10px;
             flex-wrap: wrap;
         }
-        .contact-info span {
-            display: inline-block;
-            background: #e9ecef;
-            padding: 5px 10px;
+        .contact-info a, .contact-info span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: var(--background-dark);
+            padding: 8px 12px;
             border-radius: 5px;
             font-size: 0.9em;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: background 0.3s;
         }
-        .experience-item {
+        .contact-info a:hover {
+            background: var(--border-color);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
             margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        /* Experience and Education Styling */
+        .experience-item {
+            margin-bottom: 25px;
             padding-left: 15px;
-            border-left: 2px solid #ccc;
+            position: relative;
+        }
+        .experience-item::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 0;
         }
         .experience-item h3 {
             margin: 0 0 5px 0;
-            color: #007bff;
+            color: var(--secondary-color);
+            font-size: 1.2em;
         }
         .experience-item p {
             margin: 0 0 10px 0;
             font-style: italic;
-            color: #666;
+            color: #6c757d;
             font-size: 0.95em;
         }
         .experience-item ul {
-            list-style-type: square;
-            margin: 5px 0 0 20px;
+            list-style-type: none; /* Remove default bullets */
             padding: 0;
+            margin: 5px 0 0 15px;
         }
-        .skills-list {
+        .experience-item ul li {
+            padding-left: 1em;
+            text-indent: -1em;
+        }
+        .experience-item ul li::before {
+            content: "\f058"; /* Checkmark icon */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-right: 5px;
+        }
+
+        /* Skills and Certifications Styling */
+        .skills-list, .certifications-list {
             list-style: none;
             padding: 0;
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
-        .skills-list li {
-            background: #007bff;
+        .skills-list li, .certifications-list li {
+            background: var(--primary-color);
             color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-weight: 600;
             font-size: 0.9em;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
-        .certifications-list {
-            list-style-type: none;
-            padding: 0;
+        .skills-list li i {
+            color: var(--secondary-color); /* Lighter accent for the icon */
         }
         .certifications-list li {
-            margin-bottom: 5px;
+             background: var(--background-dark);
+             color: var(--text-color);
+             border: 1px solid var(--border-color);
+        }
+        .certifications-list li i {
+            color: var(--primary-color);
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+                margin: 10px auto;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .contact-info a, .contact-info span {
+                width: 100%;
+                justify-content: flex-start;
+            }
+            .skills-list, .certifications-list {
+                gap: 8px;
+            }
         }
     </style>
 </head>
@@ -111,94 +184,93 @@
     <div class="container">
         <header>
             <h1>Mahboob Ur Rahman</h1>
-            <p>Multi-certified Systems Administrator | MCSE, MCSA, CCNA, ACE Palo Alto Networks</p>
+            <p>Multi-certified Systems Administrator | 3.5 Years' Experience</p>
             <div class="contact-info">
-                <span>📧 <a href="mailto:MAHBOOBICP@GMAIL.COM">MAHBOOBICP@GMAIL.COM</a></span>
-                <span>📞 (+92) 345-9533709</span>
-                <span>🏠 Peshawar, KPK, Pakistan</span>
-                <span>🌐 Skype: MAHBOOB3828</span>
+                <a href="mailto:MAHBOOBICP@GMAIL.COM"><i class="fas fa-envelope"></i> MAHBOOBICP@GMAIL.COM</a>
+                <span><i class="fas fa-phone"></i> (+92) 345-9533709</span>
+                <span><i class="fas fa-map-marker-alt"></i> Peshawar, KPK, Pakistan</span>
+                <span><i class="fab fa-skype"></i> MAHBOOB3828</span>
             </div>
         </header>
 
         <div class="section">
-            <h2>✨ Professional Summary</h2>
-            <p>Multi-certified (MCSE, MCSA, MCP, CCNA, ACE Palo Alto Networks) systems administrator with **3.5 years' experience** in Computer System & Network. Strong experience managing server infrastructures and network operations across Windows Server (2012/2016) and various Windows client platforms (7/Vista, 8, 10). Proven ability to effectively plan, install, configure, and optimize IT infrastructures to achieve **high availability and performance**.</p>
+            <h2><i class="fas fa-user-tie"></i> Professional Summary</h2>
+            [span_0](start_span)[span_1](start_span)<p>Multi-certified (**MCSE, MCSA, MCP, CCNA, ACE Palo Alto Networks**) systems administrator[span_0](end_span)[span_1](end_span) [span_2](start_span)with **3.5 years' experience** in Computer System & Network[span_2](end_span). [span_3](start_span)[span_4](start_span)[span_5](start_span)Strong experience managing server infrastructures and network operations across Windows Server (2012/2016) and various Windows client platforms (7/Vista, 8, 10)[span_3](end_span)[span_4](end_span)[span_5](end_span). [span_6](start_span)Proven ability to effectively plan, install, configure, and optimize IT infrastructures to achieve **high availability and performance**[span_6](end_span).</p>
         </div>
 
         <div class="section">
-            <h2>🛠️ Core Skills & Certifications</h2>
-            <h3>Key Technical Skills</h3>
+            <h2><i class="fas fa-cogs"></i> Core Skills & Certifications</h2>
+            
+            <h3><i class="fas fa-tools"></i> Key Technical Skills</h3>
             <ul class="skills-list">
-                <li>Windows Server 2012/2016</li>
-                <li>LAN, WAN & Wireless (Controllers EAP)</li>
-                <li>Firewalls: Sophos, OpenSense, PfSense</li>
-                <li>Microsoft Outlook 2010/2016</li>
-                <li>Office 365 Management</li>
-                <li>Active Directory & DHCP Server</li>
-                <li>CCTV DVR and PBX Telephony Troubleshooting</li>
-                <li>Hardware & Remote Support</li>
+                [span_7](start_span)[span_8](start_span)<li><i class="fab fa-windows"></i> Windows Server 2012/2016[span_7](end_span)[span_8](end_span)</li>
+                [span_9](start_span)<li><i class="fas fa-shield-alt"></i> Sophos, OpenSense, PfSense Firewalls[span_9](end_span)</li>
+                [span_10](start_span)[span_11](start_span)<li><i class="fas fa-network-wired"></i> LAN, WAN & Wireless (EAP Controllers)[span_10](end_span)[span_11](end_span)</li>
+                [span_12](start_span)<li><i class="fab fa-microsoft"></i> Office 365 Management[span_12](end_span) [span_13](start_span)[span_14](start_span)& Outlook Config[span_13](end_span)[span_14](end_span)</li>
+                [span_15](start_span)<li><i class="fas fa-server"></i> Active Directory & DHCP Server[span_15](end_span)</li>
+                [span_16](start_span)<li><i class="fas fa-laptop"></i> Desktop/Laptop & Remote Support[span_16](end_span)</li>
+                [span_17](start_span)<li><i class="fas fa-video"></i> CCTV DVR & PBX Telephony Troubleshoot[span_17](end_span)</li>
             </ul>
 
             <br>
 
-            <h3>Certifications</h3>
+            <h3><i class="fas fa-certificate"></i> Certifications</h3>
             <ul class="certifications-list">
-                <li>**Accredited Configuration Engineer (ACE)** - Palo Alto Networks</li>
-                <li>**Cisco Certified Network Associate (CCNA R & S)**</li>
-                <li>**Microsoft Certified Solution Expert (MCSE)**</li>
-                <li>**Microsoft Certified Solution Associate (MCSA)**</li>
-                <li>**Microsoft Certified Professional (MCP)**</li>
+                [span_18](start_span)<li><i class="fas fa-code-branch"></i> Accredited Configuration Engineer (ACE) - Palo Alto Networks[span_18](end_span)</li>
+                [span_19](start_span)<li><i class="fas fa-wifi"></i> Cisco Certified Network Associate (CCNA R & S)[span_19](end_span)</li>
+                [span_20](start_span)<li><i class="fas fa-key"></i> Microsoft Certified Solution Expert (MCSE)[span_20](end_span)</li>
+                [span_21](start_span)<li><i class="fas fa-desktop"></i> Microsoft Certified Solution Associate (MCSA)[span_21](end_span)</li>
+                [span_22](start_span)<li><i class="fas fa-microchip"></i> Microsoft Certified Professional (MCP)[span_22](end_span)</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>💼 Professional Experience</h2>
+            <h2><i class="fas fa-briefcase"></i> Professional Experience</h2>
 
             <div class="experience-item">
                 <h3>Network and Support Executive</h3>
-                <p>KPK Economic Zone Development and Management Company | Mar 2016 - Present</p>
+                <p>KPK Economic Zone Development and Management Company | <i class="far fa-calendar-alt"></i> Mar 2016 - Present</p>
                 <ul>
-                    [span_0](start_span)<li>Performed configuration and maintenance for **Sophos, OpenSense, and PfSense Firewalls**.[span_0](end_span)</li>
-                    [span_1](start_span)<li>Managed **Windows Server 2012/2016** and **Office 365 Management**.[span_1](end_span)</li>
-                    [span_2](start_span)<li>Handled installation and configuration of Microsoft Outlook 2010 & 2016 and OS Windows 7/8/10.[span_2](end_span)</li>
-                    [span_3](start_span)<li>Responsible for designing, installation, and troubleshooting of **LAN, WAN & Wireless (Controllers EAP)**.[span_3](end_span)</li>
-                    [span_4](start_span)<li>Managed Time Attendance, **CCTV DVR**, and **PBX telephonic** troubleshoot.[span_4](end_span)</li>
-                    [span_5](start_span)<li>Provided support for 150 Desktops & Laptops and remote support.[span_5](end_span)</li>
+                    [span_23](start_span)<li>Performed configuration and maintenance for **Sophos, OpenSense, and PfSense Firewalls**[span_23](end_span).</li>
+                    [span_24](start_span)[span_25](start_span)<li>Managed **Windows Server 2012/2016** and **Office 365 Management**[span_24](end_span)[span_25](end_span).</li>
+                    [span_26](start_span)<li>Responsible for designing, installation, and troubleshooting of **LAN, WAN & Wireless (Controllers EAP)**[span_26](end_span).</li>
+                    [span_27](start_span)<li>Handled Time Attendance, **CCTV DVR**, and **PBX telephonic** troubleshooting[span_27](end_span).</li>
+                    [span_28](start_span)<li>Provided support for 150 Desktops & Laptops and remote support[span_28](end_span).</li>
                 </ul>
             </div>
 
             <div class="experience-item">
                 <h3>System Administrator</h3>
-                <p>TAGM Chartered Accountants | Dec 2013 - Jan 2016</p>
+                <p>TAGM Chartered Accountants | <i class="far fa-calendar-alt"></i> Dec 2013 - Jan 2016</p>
                 <ul>
-                    [span_6](start_span)<li>Contributed to the implementation of new office IT infrastructure plans to ensure **availability and reliability**.[span_6](end_span)</li>
-                    [span_7](start_span)<li>Managed information security processes to ensure high security of corporate systems in line with global standards.[span_7](end_span)</li>
-                    [span_8](start_span)<li>Provided **first-line technical support** to users, ensuring systems functioned to standard levels.[span_8](end_span)</li>
-                    [span_9](start_span)<li>Maintained the seventy computer setup and performed installation and maintenance of **QuickBooks**.[span_9](end_span)</li>
+                    [span_29](start_span)<li>Contributed to the implementation of new office IT infrastructure plans to ensure **availability and reliability** in line with global guidelines[span_29](end_span).</li>
+                    [span_30](start_span)<li>Managed information security processes to ensure high security of corporate systems[span_30](end_span).</li>
+                    [span_31](start_span)<li>Provided **first-line technical support** to TAGM users, ensuring systems functioned to standard levels[span_31](end_span).</li>
+                    [span_32](start_span)<li>Maintained the seventy computer setup and installed/maintained **QuickBooks**[span_32](end_span).</li>
                 </ul>
             </div>
 
             <div class="experience-item">
                 <h3>System Administrator</h3>
-                <p>Zxmco Motorcycle | Jan 2013 - Dec 2013</p>
+                <p>Zxmco Motorcycle | <i class="far fa-calendar-alt"></i> Jan 2013 - Dec 2013</p>
                 <ul>
-                    [span_10](start_span)<li>Maintained the fifty-computer setup.[span_10](end_span)</li>
-                    [span_11](start_span)<li>Managed and maintained **Active Directory Services** in Windows Server 2003.[span_11](end_span)</li>
-                    [span_12](start_span)<li>Troubleshooted local area (LAN) and wide area network (WAN) issues and hardware problems.[span_12](end_span)</li>
-                    [span_13](start_span)<li>Managed **DHCP Server** and overall local and wide area network.[span_13](end_span)</li>
+                    [span_33](start_span)<li>Maintained the fifty-computer setup[span_33](end_span).</li>
+                    [span_34](start_span)<li>Managed and maintained the **Active Directory Services** in Windows Server 2003[span_34](end_span).</li>
+                    [span_35](start_span)<li>Troubleshooted LAN and WAN issues and computer hardware problems[span_35](end_span).</li>
+                    [span_36](start_span)<li>Managed **DHCP Server** and overall local and wide area network[span_36](end_span).</li>
                 </ul>
             </div>
         </div>
 
         <div class="section">
-            <h2>🎓 Education</h2>
-            <div class="experience-item" style="border-left: 2px solid #ccc;">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="experience-item">
                 <h3>BCS (Hons), Computer Science</h3>
-                <p>Islamia College University Peshawar | Graduated: 2014</p>
+                <p>Islamia College University Peshawar | [span_37](start_span)Graduated: 2014[span_37](end_span)</p>
             </div>
-            <div class="experience-item" style="border-left: 2px solid #ccc;">
+            <div class="experience-item">
                 <h3>Intermediate</h3>
-                <p>Peshawar Public School and College Peshawar | Graduated: 2010</p>
+                <p>Peshawar Public School and College Peshawar | [span_38](start_span)Graduated: 2010[span_38](end_span)</p>
             </div>
         </div>
     </div>
