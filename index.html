@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAHBOOB UR RAHMAN - IT Infrastructure & Systems Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300 ;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css ">
     
     <style>
         :root {
@@ -186,6 +186,7 @@
             justify-content: center;
             gap: 20px;
             margin-bottom: 60px;
+            flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
         }
         
         .action-button {
@@ -194,6 +195,7 @@
             border-radius: 5px;
             font-weight: 600;
             transition: background-color 0.3s, border-color 0.3s;
+            display: inline-block; /* Ensure proper spacing */
         }
 
         .btn-primary {
@@ -296,10 +298,6 @@
             margin-bottom: 20px;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 10px;
-        }
-
-        .contact-form-col {
-            flex: 1 1 450px; /* Takes up the other side/form area */
         }
 
         .contact-item { /* Unified style for contact list */
@@ -500,6 +498,11 @@
             }
             .action-buttons {
                 flex-direction: column;
+                align-items: center; /* Center buttons on very small screens */
+            }
+            .action-button {
+                width: 80%; /* Make buttons wider on small screens */
+                max-width: 300px;
             }
         }
 
@@ -530,7 +533,8 @@
             
             <div class="action-buttons">
                 <a href="#contact-form-section" class="action-button btn-primary">Get In Touch <i class="fas fa-arrow-right"></i></a>
-                <a href="https://drive.google.com/file/d/14eT_pVeGc9s6ROYGvVnDMxzLw_GUoS59/view?usp=sharing" class="action-button btn-secondary">Download Resume <i class="fas fa-download"></i></a>
+                <a href="https://www.credly.com/users/mahboob-ur-rahman/badges#credly" class="action-button btn-secondary">Digital Badges <i class="fas fa-certificate"></i></a>
+                <a href="https://drive.google.com/file/d/14eT_pVeGc9s6ROYGvVnDMxzLw_GUoS59/view?usp=sharing " class="action-button btn-secondary">Download Resume <i class="fas fa-download"></i></a>
             </div>
             
             <div class="stats-grid">
@@ -580,7 +584,7 @@
                         </div>
                         <div class="summary-contact-item">
                             <i class="fab fa-linkedin"></i>
-                            <a href="https://linkedin.com/in/iammahbooburrahman" target="_blank">linkedin.com/in/iammahbooburrahman</a>
+                            <a href="https://linkedin.com/in/iammahbooburrahman " target="_blank">linkedin.com/in/iammahbooburrahman</a>
                         </div>
                     </div>
                 </div>
@@ -722,7 +726,7 @@
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-linkedin"></i>
-                        <a href="https://linkedin.com/in/iammahbooburrahman" target="_blank">linkedin.com/in/iammahbooburrahman</a>
+                        <a href="https://linkedin.com/in/iammahbooburrahman " target="_blank">linkedin.com/in/iammahbooburrahman</a>
                     </div>
                 </div>
                 
@@ -747,7 +751,7 @@
 
     <footer class="footer">
         <div class="social-links">
-            <a href="https://linkedin.com/in/iammahbooburrahman" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://linkedin.com/in/iammahbooburrahman " class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" class="social-link" title="Twitter/X"><i class="fab fa-twitter"></i></a>
             <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
         </div>
