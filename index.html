@@ -62,7 +62,51 @@
             left: 50%;
             transform: translateX(-50%);
         }
+        /* Cert badges */
+        /* CERTIFICATION CARDS - THIN & ELEGANT */
+        .cert-badges{
+            display:flex;
+            justify-content:center;
+            gap:12px;
+            margin:25px 0;
+            flex-wrap:wrap;
+        }
         
+        .cert{
+            padding:8px 16px;          /* thinner */
+            border-radius:6px;
+            font-weight:600;
+            color:#fff;
+            font-size:0.85em;          /* smaller text */
+            letter-spacing:0.5px;
+            box-shadow:0 4px 10px rgba(0,0,0,.25); /* lighter shadow */
+        }
+        
+        .cert.green{background:#28a745;}
+        .cert.orange{background:#fd7e14;}
+        .cert.purple{background:#6f42c1;}
+        
+        /* BUTTON GROUP */
+        .btns{
+            display:flex;
+            justify-content:center;
+            gap:12px;
+            flex-wrap:wrap;
+            margin-top:35px;
+        }
+        
+        .btn{
+            padding:12px 22px;     /* slightly slimmer */
+            border-radius:6px;
+            font-weight:600;
+            text-decoration:none;
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            transition:all .3s;
+        }
+        
+                
         /* --- Header/Navigation (Responsive) --- */
         .header {
             position: sticky;
@@ -529,6 +573,11 @@
         <div class="name-banner">
             <p class="role-title">IT INFRASTRUCTURE & SYSTEMS ENGINEER</p>
             <h1>MAHBOOB UR RAHMAN</h1>
+            	 <div class="cert-badges">
+        <div class="cert green">Virtualization</div>
+        <div class="cert orange">System Administration</div>
+        <div class="cert purple">Cloud Computing</div>
+    </div>
             <p class="hook-line">Architecting Resilient IT Systems with Cloud & Virtualization Excellence</p>
             
             <div class="action-buttons">
