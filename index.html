@@ -208,8 +208,9 @@
         }
 
         .name-banner h1 {
-            font-size: 5em;
-            font-weight: 800;
+            font-size: 3.8em;
+            letter-spacing: 1px;
+            font-weight: 600;
             margin-bottom: 10px;
         }
         
@@ -467,6 +468,20 @@
             gap: 20px;
             margin-bottom: 40px;
         }
+        .skill-card {
+        position: relative;
+        }
+        
+        .skill-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: var(--primary-color);
+            opacity: 0.6;
+        }
 
         .skill-card, .cert-card {
             background-color: var(--secondary-bg);
@@ -583,7 +598,7 @@
         <div class="cert green">Virtualization</div>
         <div class="cert purple">Cloud Computing</div>
     </div>
-            <p class="hook-line">Architecting Resilient IT Systems with Cloud & Virtualization Excellence</p>
+            <p class="hook-line">Designing secure, highly available IT infrastructure that scales with business growth.</p>
             
             <div class="action-buttons">
                 <a href="#contact-form-section" class="action-button btn-primary">Get In Touch <i class="fas fa-arrow-right"></i></a>
@@ -605,8 +620,8 @@
                     <p>Cloud Platforms</p>
                 </div>
                 <div class="stat-item">
-                    <h3>100%</h3>
-                    <p>Uptime Achieved</p>
+                    <h3>99.9%</h3>
+                    <p>Service Availability</p>
                 </div>
             </div>
         </div>
