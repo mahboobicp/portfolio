@@ -16,6 +16,30 @@
     --secondary-text: #d0d0d0;     /* Muted but readable */
     --border-color: #2f2f2f;       /* Soft borders */
 }
+         /* Java script */
+         <script>
+                const sections = document.querySelectorAll("section[id]");
+                const navLinks = document.querySelectorAll(".nav-link");
+                
+                window.addEventListener("scroll", () => {
+                  let current = "";
+                
+                  sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 120;
+                    if (scrollY >= sectionTop) {
+                      current = section.getAttribute("id");
+                    }
+                  });
+                
+                  navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${current}`) {
+                      link.classList.add("active");
+                    }
+                  });
+                });
+        </script>
+
 
         /* Base Styles */
         body {
